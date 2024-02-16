@@ -83,6 +83,8 @@ public class MasterScript : MonoBehaviour
 
     private float ddaTimer = 0f;
 
+    float timerReduction = 0.1f;
+
     //Gyro:
 
     private Gyroscope gyro;
@@ -132,10 +134,15 @@ public class MasterScript : MonoBehaviour
     {
         ddaTimer += Time.deltaTime;
 
-        if (ddaTimer >= 10f && DebrisSpawn.speed < hardMode)
+        if (ddaTimer >= 10f && DebrisSpawn.speed != hardMode)
         {
             DebrisSpawn.speed += 5;
-            DebrisSpawn.timerCooldown -= .2f;
+            if(DebrisSpawn.timerCooldown - timerReduction <= 0)
+            {
+                timerReduction = (timerReduction / 5.0f);
+            }
+
+            DebrisSpawn.timerCooldown -= timerReduction;
 
             ddaTimer = 0f;
         }
