@@ -43,6 +43,8 @@ public class MasterScript : MonoBehaviour
 
     public AudioSource audioEvent;
 
+    public bool soundPlaying = true;
+
     //Resolution Attributes:
 
     private Camera cam;
@@ -357,5 +359,17 @@ public class MasterScript : MonoBehaviour
     public void difficultMode()
     {
         hardMode = 50;
+    }
+    public void toggleSounds()
+    {
+        if(soundPlaying == true)
+        {
+            audioEvent.volume = 0;
+        }
+        if(soundPlaying == false)
+        {
+            audioEvent.volume = 50;
+        }
+        soundPlaying = !soundPlaying;
     }
 }

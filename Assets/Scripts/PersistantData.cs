@@ -30,6 +30,9 @@ public class PersistantData : MonoBehaviour
     //Gyro:
     public static bool gyro = false;
 
+    //Toggle
+    public bool musicPlaying = true;
+
     private void Awake()
     {
         //Ensure that there is only one instance of the Singleton
@@ -55,6 +58,19 @@ public class PersistantData : MonoBehaviour
     {
         Scene_Music.clip = sound;
         Scene_Music.Play();
+    }
+
+    public void toggleMusic()
+    {
+        if(musicPlaying == true)
+        {
+            Scene_Music.volume = 0;
+        }
+        else if(musicPlaying == false)
+        {
+            Scene_Music.volume = 50;
+        }
+        musicPlaying = !musicPlaying;
     }
 
 }
