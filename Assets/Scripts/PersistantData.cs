@@ -32,6 +32,7 @@ public class PersistantData : MonoBehaviour
 
     //Toggle
     public bool musicPlaying = true;
+    public GameObject rocketSound;
 
     private void Awake()
     {
@@ -64,10 +65,12 @@ public class PersistantData : MonoBehaviour
     {
         if(musicPlaying == true)
         {
+            rocketSound.GetComponent<AudioSource>().volume = 0;
             Scene_Music.volume = 0;
         }
         else if(musicPlaying == false)
         {
+            rocketSound.GetComponent<AudioSource>().volume = 50;
             Scene_Music.volume = 50;
         }
         musicPlaying = !musicPlaying;
