@@ -99,13 +99,18 @@ public class MasterScript : MonoBehaviour
 
     public float maxAngle = 30f;
 
-    private float gyroSensitivity = .05f;
-
     //Options Menu:
 
     public GameObject optionsMenu;
 
     public float bopRotationThreshold = 50f;
+
+    //Other Audio Sources:
+
+    public AudioSource soundThrusters;
+    public AudioSource soundMusic;
+    public AudioSource soundEngine;
+
 
     //DDA Incrementer: (dda/hardMode = x/100) ~ (dda*hardMode = 100*x) ~ ((dda*hardMode)/100)=x
     private void DDA() 
@@ -360,16 +365,23 @@ public class MasterScript : MonoBehaviour
     {
         hardMode = 50;
     }
-    public void toggleSounds()
+    public void ToggleSounds()
     {
-        if(soundPlaying == true)
+        if (soundPlaying)
         {
             audioEvent.volume = 0;
+            soundEngine.volume = 0;
+            soundThrusters.volume = 0;
+            soundMusic.volume = 0;
         }
-        if(soundPlaying == false)
+        else
         {
-            audioEvent.volume = 50;
+            audioEvent.volume = .7f; // Adjust the value as needed
+            soundEngine.volume = .5f;
+            soundThrusters.volume = .5f;
+            soundMusic.volume = 0.6f;
         }
+
         soundPlaying = !soundPlaying;
     }
 }
