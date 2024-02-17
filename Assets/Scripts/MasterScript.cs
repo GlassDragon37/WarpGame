@@ -313,6 +313,13 @@ public class MasterScript : MonoBehaviour
         UIC_Swipe();//Works
         UIC_Gyro();//No Work---------------------------------------
         UIC_Bop();//Works
+
+        if (Input.GetKeyDown("space"))
+        {
+            Debug.Log("Pulling up options");
+            optionsMenu.SetActive(true);
+            Time.timeScale = 0f;
+        }
     }
 
     void Update()
@@ -342,5 +349,13 @@ public class MasterScript : MonoBehaviour
                 SceneManager.LoadScene(2);// Ending
             }
         }
+    }
+    public void easyMode()
+    {
+        hardMode = 0;
+    }
+    public void difficultMode()
+    {
+        hardMode = 50;
     }
 }
