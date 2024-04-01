@@ -18,11 +18,15 @@ public class SceneManagerScript : MonoBehaviour
     }
     public void GoToOptions()
     {
-        SceneManager.LoadScene(2); // Options
+        SceneManager.LoadScene(4); // Options, hasn't been made yet
     }
     public void GoToEnd()
     {
-        SceneManager.LoadScene(3); // Ending
+        SceneManager.LoadScene(2); // Ending
+    }
+    public void loadAR()
+    {
+        SceneManager.LoadScene(3);//AR Mode
     }
 
     public void DDASetter()

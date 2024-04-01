@@ -14,5 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 6946906b4f21bf641be91c1020bb5200
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/ARVersion.unity
+    guid: 232edc2915a5ab240a0744dd348a1f32
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 193e3b7c0fd7e5b488ef8da76cbca928, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 483156d210ffa6d4d98fe516889672ad, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 881a557122aed7a41bbdabb70c82a365, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: b7f714f893c47ba46909e2ad6db9339d, type: 2}
   m_UseUCBPForAssetBundles: 0

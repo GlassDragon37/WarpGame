@@ -6231,6 +6231,7 @@ MonoBehaviour:
   music:
   - {fileID: 8300000, guid: 8f4c17c4f02e884459ef860ef80a620e, type: 3}
   musicPlaying: 1
+  rocketSound: {fileID: 0}
 --- !u!4 &1347452221
 Transform:
   m_ObjectHideFlags: 0
@@ -7111,6 +7112,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 03ab0c7c0add18e4e8d7e28d4c22c677, type: 3}
   - {fileID: 8300000, guid: b674262370b18cc43aa119bc4026d2c0, type: 3}
   audioEvent: {fileID: 1397632554}
+  soundPlaying: 1
   emissionObj: {fileID: 1503516422}
   sensitivity: 5
   minAngle: -30
