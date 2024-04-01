@@ -61,19 +61,4 @@ public class PersistantData : MonoBehaviour
         Scene_Music.Play();
     }
 
-    public void toggleMusic()
-    {
-        if(musicPlaying == true)
-        {
-            rocketSound.GetComponent<AudioSource>().volume = 0;
-            Scene_Music.volume = 0;
-        }
-        else if(musicPlaying == false)
-        {
-            rocketSound.GetComponent<AudioSource>().volume = 50;
-            Scene_Music.volume = 50;
-        }
-        musicPlaying = !musicPlaying;
-    }
-
 }
