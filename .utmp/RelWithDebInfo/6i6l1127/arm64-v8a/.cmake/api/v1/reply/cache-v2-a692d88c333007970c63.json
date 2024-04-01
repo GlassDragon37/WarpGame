@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "android-22"
+			"value" : "android-24"
 		},
 		{
 			"name" : "ANDROID_STL",
@@ -139,7 +139,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/Owner/Desktop/Fall 2023 Games Assets/GitHub Thing/WarpGame/.utmp/RelWithDebInfo/6v3a3f6y/arm64-v8a"
+			"value" : "c:/Users/Owner/Desktop/Fall 2023 Games Assets/GitHub Thing/WarpGame/.utmp/RelWithDebInfo/6i6l1127/arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -611,7 +611,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "C:\\Users\\Owner\\Desktop\\Fall 2023 Games Assets\\GitHub Thing\\WarpGame\\.utmp\\RelWithDebInfo\\6v3a3f6y\\prefab\\arm64-v8a\\prefab"
+			"value" : "C:\\Users\\Owner\\Desktop\\Fall 2023 Games Assets\\GitHub Thing\\WarpGame\\.utmp\\RelWithDebInfo\\6i6l1127\\prefab\\arm64-v8a\\prefab"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -707,7 +707,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "C:\\Users\\Owner\\Desktop\\Fall 2023 Games Assets\\GitHub Thing\\WarpGame\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\6v3a3f6y\\obj\\arm64-v8a"
+			"value" : "C:\\Users\\Owner\\Desktop\\Fall 2023 Games Assets\\GitHub Thing\\WarpGame\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\6i6l1127\\obj\\arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -979,7 +979,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "C:\\Users\\Owner\\Desktop\\Fall 2023 Games Assets\\GitHub Thing\\WarpGame\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\6v3a3f6y\\obj\\arm64-v8a"
+			"value" : "C:\\Users\\Owner\\Desktop\\Fall 2023 Games Assets\\GitHub Thing\\WarpGame\\Library\\Bee\\Android\\Prj\\IL2CPP\\Gradle\\unityLibrary\\build\\intermediates\\cxx\\RelWithDebInfo\\6i6l1127\\obj\\arm64-v8a"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1211,7 +1211,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "22"
+			"value" : "24"
 		},
 		{
 			"name" : "CMAKE_TOOLCHAIN_FILE",
@@ -1251,7 +1251,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Owner/Desktop/Fall 2023 Games Assets/GitHub Thing/WarpGame/.utmp/RelWithDebInfo/6v3a3f6y/arm64-v8a"
+			"value" : "C:/Users/Owner/Desktop/Fall 2023 Games Assets/GitHub Thing/WarpGame/.utmp/RelWithDebInfo/6i6l1127/arm64-v8a"
 		},
 		{
 			"name" : "Unity_IS_TOP_LEVEL",
@@ -1287,7 +1287,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Users/Owner/Desktop/Fall 2023 Games Assets/GitHub Thing/WarpGame/.utmp/RelWithDebInfo/6v3a3f6y/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/games-frame-pacing"
+			"value" : "C:/Users/Owner/Desktop/Fall 2023 Games Assets/GitHub Thing/WarpGame/.utmp/RelWithDebInfo/6i6l1127/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/games-frame-pacing"
 		},
 		{
 			"name" : "swappywrapper_BINARY_DIR",
@@ -1299,7 +1299,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/Owner/Desktop/Fall 2023 Games Assets/GitHub Thing/WarpGame/.utmp/RelWithDebInfo/6v3a3f6y/arm64-v8a/FramePacing"
+			"value" : "C:/Users/Owner/Desktop/Fall 2023 Games Assets/GitHub Thing/WarpGame/.utmp/RelWithDebInfo/6i6l1127/arm64-v8a/FramePacing"
 		},
 		{
 			"name" : "swappywrapper_IS_TOP_LEVEL",
