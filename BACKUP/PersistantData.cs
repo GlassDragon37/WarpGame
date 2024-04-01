@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 /// -PersistantData-
 /// 
 /// Main Author: Michael Knighten
-/// Secondary Author: Adele Rousseau
-/// Start Date: 2/11/2024
+/// Start Date: 2/20/2024
 /// 
 /// </summary>
 public class PersistantData : MonoBehaviour
@@ -42,31 +41,6 @@ public class PersistantData : MonoBehaviour
 
     private void Start()
     {
-        playSound(music[0]);
+        
     }
-
-    private void playSound(AudioClip sound)
-    {
-        Scene_Music.clip = sound;
-        Scene_Music.Play();
-    }
-
-    public void goToTitle()
-    {
-        SceneManager.LoadScene(0);// Title
-    }
-    public void goToEasyLevel()
-    {
-        SceneManager.LoadScene(1); // GamePlay
-    }
-    public void goToOptions()
-    {
-        SceneManager.LoadScene(2); // Options
-    }
-    public void goToEnd()
-    {
-        SceneManager.LoadScene(3); // Ending
-    }
-
-
 }
