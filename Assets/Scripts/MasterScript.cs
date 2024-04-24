@@ -110,6 +110,7 @@ public class MasterScript : MonoBehaviour
     public AudioSource soundThrusters;
     public AudioSource soundMusic;
     public AudioSource soundEngine;
+    private bool isMuted = false;
 
     //Visual Damage Indicator:
 
@@ -119,6 +120,24 @@ public class MasterScript : MonoBehaviour
 
     public float cooldownExplosion;
 
+    //Audio Control:
+    public void ToggleAudioSources()
+    {
+        // Get all AudioSource components in the scene
+        AudioSource[] audioSources;
+
+        audioSources = new AudioSource[] { soundThrusters, soundMusic, soundEngine };
+
+        // Toggle the volume based on the isMuted flag
+        float newVolume = isMuted ? 1.0f : 0.0f; // If muted, set to 1; if not, set to 0
+
+        foreach (var audioSource in audioSources)
+        {
+            audioSource.volume = newVolume; // Set the volume to the new value
+        }
+
+        isMuted = !isMuted; // Flip the isMuted flag
+    }
 
     //DDA Incrementer: (dda/hardMode = x/100) ~ (dda*hardMode = 100*x) ~ ((dda*hardMode)/100)=x
     private void DDA() 
@@ -379,25 +398,6 @@ public class MasterScript : MonoBehaviour
     public void difficultMode()
     {
         hardMode = 50;
-    }
-    public void ToggleSounds()
-    {
-        if (soundPlaying)
-        {
-            audioEvent.volume = 0;
-            soundEngine.volume = 0;
-            soundThrusters.volume = 0;
-            soundMusic.volume = 0;
-        }
-        else
-        {
-            audioEvent.volume = .7f; // Adjust the value as needed
-            soundEngine.volume = .5f;
-            soundThrusters.volume = .5f;
-            soundMusic.volume = 0.6f;
-        }
-
-        soundPlaying = !soundPlaying;
     }
 
     private IEnumerator ToggleExplosionActivationOff()

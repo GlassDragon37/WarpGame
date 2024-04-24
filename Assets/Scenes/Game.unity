@@ -205,7 +205,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1760993890}
         m_TargetAssemblyTypeName: MasterScript, Assembly-CSharp
-        m_MethodName: ToggleSounds
+        m_MethodName: ToggleAudioSources
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
