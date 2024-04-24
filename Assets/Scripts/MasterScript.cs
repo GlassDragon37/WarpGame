@@ -111,6 +111,14 @@ public class MasterScript : MonoBehaviour
     public AudioSource soundMusic;
     public AudioSource soundEngine;
 
+    //Visual Damage Indicator:
+
+    public GameObject Explosion;
+
+    private bool showExplosion;
+
+    public float cooldownExplosion;
+
 
     //DDA Incrementer: (dda/hardMode = x/100) ~ (dda*hardMode = 100*x) ~ ((dda*hardMode)/100)=x
     private void DDA() 
@@ -300,6 +308,8 @@ public class MasterScript : MonoBehaviour
 
     void Start()
     {
+        showExplosion = false;
+
         initialColor = Color.red;//actually initial
 
         targetColor = Color.black;//actually target
@@ -334,6 +344,7 @@ public class MasterScript : MonoBehaviour
         ScoreSync();
         HealthSync();
         DDA();
+        ExplosionVisual();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -355,6 +366,10 @@ public class MasterScript : MonoBehaviour
             {
                 SceneManager.LoadScene(2);// Ending
             }
+
+            //Explosion:
+            showExplosion = true;
+            StartCoroutine(ToggleExplosionActivationOff());
         }
     }
     public void easyMode()
@@ -383,5 +398,24 @@ public class MasterScript : MonoBehaviour
         }
 
         soundPlaying = !soundPlaying;
+    }
+
+    private IEnumerator ToggleExplosionActivationOff()
+    {
+        yield return new WaitForSeconds(cooldownExplosion);
+        showExplosion = false;
+
+    }
+
+    private void ExplosionVisual()
+    {
+        if (showExplosion)
+        {
+            Explosion.SetActive(true);
+        }
+        else
+        {
+            Explosion.SetActive(false);
+        }
     }
 }

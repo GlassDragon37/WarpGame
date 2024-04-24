@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+///
+/// Author: Michael Knighten
+/// Start Date: 2/11/2024
+/// 
+/// </summary>
 public class SceneManagerScript : MonoBehaviour
 {
     public Slider DifficultySlider;
