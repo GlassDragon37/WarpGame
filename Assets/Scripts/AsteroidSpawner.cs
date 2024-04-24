@@ -1,7 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+///
+/// Author: Michael Knighten
+/// Start Date: 2/11/2024
+/// 
+/// </summary>
 public class AsteroidSpawner : MonoBehaviour
 {
     public GameObject[] Debris;

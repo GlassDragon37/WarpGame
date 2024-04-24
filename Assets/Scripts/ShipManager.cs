@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+///
+/// Author: Michael Knighten
+/// Start Date: 2/11/2024
+/// 
+/// </summary>
 public class ShipManager : MonoBehaviour
 {
 
@@ -21,6 +26,14 @@ public class ShipManager : MonoBehaviour
     public AudioClip[] audioE;
 
     public AudioSource audioEvent;
+
+    //Visual Damage Indicator:
+
+    public GameObject Explosion;
+
+    private bool showExplosion;
+
+    public float cooldownExplosion;
 
 
     private void ScoreSync()
@@ -48,6 +61,8 @@ public class ShipManager : MonoBehaviour
 
     private void Start()
     {
+        showExplosion = false;
+
         PersistantData.health = 3;
 
         PersistantData.score = 0;
@@ -59,6 +74,7 @@ public class ShipManager : MonoBehaviour
     {
         ScoreSync();
         HealthSync();
+        ExplosionVisual();
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -78,6 +94,30 @@ public class ShipManager : MonoBehaviour
             {
                 SceneManager.LoadScene(2);// Ending
             }
+
+            //Explosion:
+            showExplosion = true;
+            StartCoroutine(ToggleExplosionActivationOff());
+
+        }
+    }
+
+    private IEnumerator ToggleExplosionActivationOff()
+    {
+        yield return new WaitForSeconds(cooldownExplosion);
+        showExplosion = false;
+
+    }
+
+    private void ExplosionVisual() 
+    {
+        if (showExplosion)
+        {
+            Explosion.SetActive(true);
+        }
+        else 
+        {
+            Explosion.SetActive(false);
         }
     }
 }

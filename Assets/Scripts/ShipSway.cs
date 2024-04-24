@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+/// <summary>
+///
+/// Author: Michael Knighten
+/// Start Date: 2/11/2024
+/// 
+/// </summary>
 public class ShipSway : MonoBehaviour
 {
 
