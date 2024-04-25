@@ -35,6 +35,8 @@ public class ShipManager : MonoBehaviour
 
     public float cooldownExplosion;
 
+    public string gameMode;
+
 
     private void ScoreSync()
     {
@@ -61,6 +63,7 @@ public class ShipManager : MonoBehaviour
 
     private void Start()
     {
+        gameMode = SceneManager.GetActiveScene().name;
         showExplosion = false;
 
         PersistantData.health = 3;
@@ -92,7 +95,14 @@ public class ShipManager : MonoBehaviour
 
             if (PersistantData.health <= 0)
             {
-                SceneManager.LoadScene(2);// Ending
+                if (gameMode == "AR Mode")
+                {
+                    SceneManager.LoadScene(4);
+                }
+                else
+                {
+                    SceneManager.LoadScene(2);// Ending
+                }
             }
 
             //Explosion:
